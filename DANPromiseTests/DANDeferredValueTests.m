@@ -6,7 +6,8 @@
 //  Copyright © 2015 Rocket Apps. All rights reserved.
 //
 
-#import <XCTest/XCTest.h>
+@import XCTest;
+
 #import "DANDeferredValue.h"
 #import "DANPromise_Private.h"
 
@@ -17,11 +18,7 @@
 @implementation DANDeferredValueTests
 
 - (void)test_creatingADeferredValue_withAnExecutorBlock_usingDeferredValueWithExecutor {
-    DANDeferredExecutorBlock executor = ^(DANPromiseSuccessBlock __nonnull success,
-                                          DANPromiseErrorBlock __nonnull error) {
-        
-    };
-    
+    DANDeferredExecutorBlock executor = ^(DANPromiseSuccessBlock success, DANPromiseErrorBlock error) {};
     DANDeferredValue *deferredValue = [DANDeferredValue deferredValueWithExecutor:executor];
     
     XCTAssertNotNil(deferredValue);

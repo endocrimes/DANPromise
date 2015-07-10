@@ -6,7 +6,9 @@
 //  Copyright © 2015 Rocket Apps. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
+
+NS_ASSUME_NONNULL_BEGIN
 
 typedef NS_ENUM(NSInteger, DANPromiseState) {
     DANPromiseStateIncomplete = 0,
@@ -16,9 +18,10 @@ typedef NS_ENUM(NSInteger, DANPromiseState) {
 };
 
 @interface DANPromise ()
+
 @property (nonatomic, strong) dispatch_queue_t queue;
 @property (nonatomic, assign) DANPromiseState state;
-@property (nonatomic, strong) NSMutableArray *callbacks;
+@property (nonatomic, strong, readonly) NSMutableArray *callbacks;
 
 @property (nonatomic, strong) dispatch_queue_t internalQueue;
 
@@ -26,3 +29,5 @@ typedef NS_ENUM(NSInteger, DANPromiseState) {
 - (void)performBlock:(dispatch_block_t)block;
 
 @end
+
+NS_ASSUME_NONNULL_END

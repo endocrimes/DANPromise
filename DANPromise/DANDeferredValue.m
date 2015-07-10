@@ -13,15 +13,11 @@ NSString *DANDeferredValueErrorDomain = @"lt.danie.DANDeferredValue";
 const NSInteger DANDeferredValueNilResultError = 1000;
 
 static NSError *NSErrorFromNilValue() {
+    NSDictionary *userInfo = @{ NSLocalizedDescriptionKey: @"Unexpectedly found a nil value" };
     return [NSError errorWithDomain:DANDeferredValueErrorDomain
                                code:DANDeferredValueNilResultError
-                           userInfo:@{
-                                      NSLocalizedDescriptionKey: @"Unexpectedly found a nil value"
-                                      }];
+                           userInfo:userInfo];
 }
-
-@interface DANDeferredValue ()
-@end
 
 @implementation DANDeferredValue
 
@@ -35,9 +31,9 @@ static NSError *NSErrorFromNilValue() {
             
             shouldComplete = YES;
             
-            blocksToExecute = self.callbacks;
+            blocksToExecute = [self.callbacks copy];
             
-            self.callbacks = nil;
+            [self.callbacks removeAllObjects];
         }
     });
     
@@ -48,25 +44,20 @@ static NSError *NSErrorFromNilValue() {
     }
 }
 
-- (nonnull instancetype)init {
+- (instancetype)init {
+    return [self initWithQueue:nil];
+}
+
+- (instancetype)initWithQueue:(nullable dispatch_queue_t)queue {
     self = [super init];
-    if (self) {
-        self.state = DANPromiseStateIncomplete;
-    }
+
+    self.state = DANPromiseStateIncomplete;
+    self.queue = queue;
     
     return self;
 }
 
-- (nonnull instancetype)initWithQueue:(dispatch_queue_t __nonnull)queue {
-    self = [self init];
-    if (self) {
-        self.queue = queue;
-    }
-    
-    return self;
-}
-
-+ (nonnull instancetype)deferredValue {
++ (instancetype)deferredValue {
     return [[self alloc] init];
 }
 

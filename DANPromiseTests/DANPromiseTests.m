@@ -6,26 +6,31 @@
 //  Copyright (c) 2015 Rocket Apps. All rights reserved.
 //
 
-#import <XCTest/XCTest.h>
+@import XCTest;
+
 #import "DANDeferredValue.h"
 #import "DANPromise.h"
 #import "DANPromise_Private.h"
 #import "DANTestCallback.h"
 
 @interface DANPromiseTests : XCTestCase
+
 @property (nonatomic, strong) DANTestCallback *callback;
+
 @end
 
 @implementation DANPromiseTests
 
 - (void)setUp {
     [super setUp];
+
     self.callback = [DANTestCallback new];
 }
 
 - (void)tearDown {
-    [super tearDown];
     self.callback = nil;
+
+    [super tearDown];
 }
 
 - (void)test_then {

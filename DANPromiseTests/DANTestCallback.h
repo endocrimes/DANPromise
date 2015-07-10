@@ -6,7 +6,8 @@
 //  Copyright © 2015 Rocket Apps. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
+
 #import "DANPromise.h"
 
 @interface DANTestCallback : NSObject
