@@ -18,7 +18,7 @@ typedef void (^DANPromiseTryMapBlock)(id value, DANPromiseSuccessBlock success, 
 
 @interface DANPromise : NSObject
 
-@property (nonatomic, strong) id __nullable result;
+@property (nonatomic, nullable, strong) id result;
 
 /**
  *  @return If the Promise has completed with a rejection.
