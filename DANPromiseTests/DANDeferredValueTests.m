@@ -6,7 +6,8 @@
 //  Copyright © 2015 Rocket Apps. All rights reserved.
 //
 
-#import <XCTest/XCTest.h>
+@import XCTest;
+
 #import "DANDeferredValue.h"
 #import "DANPromise_Private.h"
 
