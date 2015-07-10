@@ -15,7 +15,7 @@
 @property (nonatomic, copy) DANPromiseSuccessBlock successBlock;
 @property (nonatomic, copy) DANPromiseErrorBlock errorBlock;
 
-@property (nonatomic) NSInteger successBlockCallCount;
-@property (nonatomic) NSInteger errorBlockCallCount;
+@property (nonatomic, assign) NSInteger successBlockCallCount;
+@property (nonatomic, assign) NSInteger errorBlockCallCount;
 
 @end

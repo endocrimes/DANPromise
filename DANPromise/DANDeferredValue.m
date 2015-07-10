@@ -13,7 +13,7 @@ NSString *DANDeferredValueErrorDomain = @"lt.danie.DANDeferredValue";
 const NSInteger DANDeferredValueNilResultError = 1000;
 
 static NSError *NSErrorFromNilValue() {
-    NSDictionary *userInfo = @{NSLocalizedDescriptionKey: @"Unexpectedly found a nil value"};
+    NSDictionary *userInfo = @{ NSLocalizedDescriptionKey: @"Unexpectedly found a nil value" };
     return [NSError errorWithDomain:DANDeferredValueErrorDomain
                                code:DANDeferredValueNilResultError
                            userInfo:userInfo];
