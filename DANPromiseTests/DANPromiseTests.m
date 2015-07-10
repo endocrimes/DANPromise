@@ -103,4 +103,36 @@
     XCTAssertEqual(self.callback.errorBlockCallCount, 0, @"catch: should not be called");
 }
 
+- (void)test_returns_correct_value_when_executing_asyncronously {
+    DANDeferredValue *deferred = [DANDeferredValue deferredValue];
+    DANPromise *promise = [deferred promise];
+    NSString *value = @"Hello!";
+    XCTestExpectation *expectation = [self expectationWithDescription:@"Should fullfil with correct value"];
+    
+    [promise then:^(id theValue) {
+        XCTAssertEqualObjects(value, theValue);
+        
+        [expectation fulfill];
+    }];
+    
+    [deferred fullfill:value];
+    
+    [self waitForExpectationsWithTimeout:2.0 handler:nil];
+}
+
+- (void)test_returns_correct_value_when_executing_syncronously {
+    DANDeferredValue *deferred = [DANDeferredValue deferredValue];
+    DANPromise *promise = [deferred promise];
+    NSString *value = @"Hello!";
+    __block NSString *outputValue;
+    
+    [deferred fullfill:value];
+    
+    [promise then:^(id theValue) {
+        outputValue = theValue;
+    }];
+    
+    XCTAssertEqualObjects(value, outputValue);
+}
+
 @end
