@@ -31,6 +31,11 @@ typedef void (^DANPromiseTryMapBlock)(id, DANPromiseSuccessBlock, DANPromiseErro
 - (BOOL)isFulfilled;
 
 /**
+ *  @return If the promise was cancelled.
+ */
+- (BOOL)isCancelled;
+
+/**
  *  Add a block to be called asyncronously upon fullfillment of the promise or immediately if already completed.
  */
 - (DANPromise *)then:(DANPromiseSuccessBlock)then;
@@ -49,6 +54,11 @@ typedef void (^DANPromiseTryMapBlock)(id, DANPromiseSuccessBlock, DANPromiseErro
  *  Attempt to map the promises value with a given block.
  */
 - (DANPromise *)tryMap:(DANPromiseTryMapBlock)map;
+
+/**
+ *  Stop any actions from occuring when the Promise is fulfilled or errored.
+ */
+- (void)cancel;
 
 @end
 

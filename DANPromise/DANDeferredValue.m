@@ -89,6 +89,8 @@ static NSError *NSErrorFromNilValue() {
 }
 
 - (DANPromise *)fullfill:(nullable id)value {
+    self.result = value;
+    
     if (value == nil) {
         [self reject:NSErrorFromNilValue()];
         return [self promise];
@@ -99,6 +101,8 @@ static NSError *NSErrorFromNilValue() {
 }
 
 - (DANPromise *)reject:(nonnull NSError *)error {
+    self.result = error;
+    g
     [self transitionToState:DANPromiseStateRejected];
     return [self promise];
 }
