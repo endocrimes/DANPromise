@@ -14,10 +14,11 @@
 
 - (instancetype)init {
     self = [super init];
-    
-    _callbacks = [NSMutableArray array];
-    _internalQueue = dispatch_queue_create("lt.danie.promises", 0);
-    
+    if (self) {
+        _callbacks = [NSMutableArray array];
+        _internalQueue = dispatch_queue_create("lt.danie.promises", 0);
+    }
+
     return self;
 }
 
