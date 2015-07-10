@@ -8,6 +8,8 @@
 
 @import Foundation;
 
+NS_ASSUME_NONNULL_BEGIN
+
 typedef NS_ENUM(NSInteger, DANPromiseState) {
     DANPromiseStateIncomplete = 0,
     DANPromiseStateRejected,
@@ -27,3 +29,5 @@ typedef NS_ENUM(NSInteger, DANPromiseState) {
 - (void)performBlock:(dispatch_block_t)block;
 
 @end
+
+NS_ASSUME_NONNULL_END
