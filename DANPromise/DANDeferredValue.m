@@ -2,7 +2,7 @@
 //  DANDeferredValue.m
 //  DANPromise
 //
-//  Created by  Danielle Lancashireon 10/07/2015.
+//  Created by Danielle Lancashire on 10/07/2015.
 //  Copyright © 2015 Rocket Apps. All rights reserved.
 //
 
