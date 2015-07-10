@@ -21,19 +21,19 @@ typedef void (^DANPromiseTryMapBlock)(id value, DANPromiseSuccessBlock success, 
 @property (nonatomic, nullable, strong) id result;
 
 /**
- *  @return If the Promise has completed with a rejection.
+ *  If the Promise has completed with a rejection.
  */
-- (BOOL)isRejected;
+@property (nonatomic, getter=isRejected) BOOL rejected;
 
 /**
- *  @return If the Promise has completed successfully.
+ *  If the Promise has completed successfully.
  */
-- (BOOL)isFulfilled;
+@property (nonatomic, getter=isFulfilled) BOOL fulfilled;
 
 /**
- *  @return If the promise was cancelled.
+ *  If the promise was cancelled.
  */
-- (BOOL)isCancelled;
+@property (nonatomic, getter=isCancelled) BOOL cancelled;
 
 /**
  *  Add a block to be called asyncronously upon fullfillment of the promise or immediately if already completed.
