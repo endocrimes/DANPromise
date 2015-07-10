@@ -14,18 +14,22 @@
 #import "DANTestCallback.h"
 
 @interface DANPromiseTests : XCTestCase
+
 @property (nonatomic, strong) DANTestCallback *callback;
+
 @end
 
 @implementation DANPromiseTests
 
 - (void)setUp {
     [super setUp];
+
     self.callback = [DANTestCallback new];
 }
 
 - (void)tearDown {
     [super tearDown];
+
     self.callback = nil;
 }
 
