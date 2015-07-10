@@ -135,4 +135,18 @@
     XCTAssertEqualObjects(value, outputValue);
 }
 
+- (void)test_cancellation_acutally_cancels {
+    DANDeferredValue *deferred = [DANDeferredValue deferredValue];
+    DANPromise *promise = [deferred promise];
+    
+    [promise then:self.callback.successBlock];
+    [promise cancel];
+    
+    XCTAssertEqual(self.callback.successBlockCallCount, 0, @"then: not called prematurely");
+    
+    [deferred fullfill:@YES];
+    
+    XCTAssertEqual(self.callback.successBlockCallCount, 0, @"then: should not be called");
+}
+
 @end
