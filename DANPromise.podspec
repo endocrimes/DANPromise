@@ -13,6 +13,6 @@ Pod::Spec.new do |s|
   s.platform            = :ios, "7.0"
 	s.source              = { :git => "https://github.com/DanielTomlinson/DANPromise.git", :tag => s.version }
   s.source_files        = "Classes", "DANPromise/**/*.{h,m}"
-	s.public_header_files = "DANPromise/{DANPromise,DANDeferredValue}.{h,m}"
+	s.public_header_files = "DANPromise/{DANPromise,DANDeferredValue}.h"
   s.requires_arc        = true
 end
