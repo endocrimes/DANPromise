@@ -11,7 +11,8 @@
 typedef NS_ENUM(NSInteger, DANPromiseState) {
     DANPromiseStateIncomplete = 0,
     DANPromiseStateRejected,
-    DANPromiseStateFulfilled
+    DANPromiseStateFulfilled,
+    DANPromiseStateCancelled
 };
 
 @interface DANPromise ()

@@ -33,9 +33,13 @@
     return self.state == DANPromiseStateFulfilled;
 }
 
+- (BOOL)isCancelled {
+    return self.state == DANPromiseStateCancelled;
+}
+
 - (nonnull DANPromise *)then:(nonnull DANPromiseSuccessBlock)then {
     [self bindOrPerformBlock:^{
-        if (self.isFulfilled) {
+        if (self.isFulfilled && !self.isCancelled) {
             then(self.result);
         }
     }];
@@ -45,7 +49,7 @@
 
 - (nonnull DANPromise *)catch:(nonnull DANPromiseErrorBlock)error {
     [self bindOrPerformBlock:^{
-        if (self.isRejected) {
+        if (self.isRejected && !self.isCancelled) {
             error((NSError *)self.result);
         }
     }];
@@ -84,6 +88,12 @@
     }];
     
     return [transformedValue promise];
+}
+
+- (void)cancel {
+    dispatch_sync(self.internalQueue, ^{
+        self.state = DANPromiseStateCancelled;
+    });
 }
 
 #pragma mark - Private
