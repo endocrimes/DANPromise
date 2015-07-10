@@ -6,7 +6,7 @@
 //  Copyright © 2015 Rocket Apps. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 typedef NS_ENUM(NSInteger, DANPromiseState) {
     DANPromiseStateIncomplete = 0,
