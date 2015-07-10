@@ -32,9 +32,9 @@ static NSError *NSErrorFromNilValue() {
             
             shouldComplete = YES;
             
-            blocksToExecute = self.callbacks;
+            blocksToExecute = [self.callbacks copy];
             
-            self.callbacks = nil;
+            [self.callbacks removeAllObjects];
         }
     });
     
