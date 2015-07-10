@@ -49,7 +49,7 @@ static NSError *NSErrorFromNilValue() {
 }
 
 - (instancetype)initWithQueue:(nullable dispatch_queue_t)queue {
-    self = [self init];
+    self = [super init];
 
     self.state = DANPromiseStateIncomplete;
     self.queue = queue;
