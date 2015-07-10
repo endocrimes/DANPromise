@@ -28,9 +28,9 @@
 }
 
 - (void)tearDown {
-    [super tearDown];
-
     self.callback = nil;
+
+    [super tearDown];
 }
 
 - (void)test_then {
