@@ -44,25 +44,20 @@ static NSError *NSErrorFromNilValue() {
     }
 }
 
-- (nonnull instancetype)init {
-    self = [super init];
-    if (self) {
-        self.state = DANPromiseStateIncomplete;
-    }
-    
-    return self;
+- (instancetype)init {
+    return [self initWithQueue:nil];
 }
 
-- (nonnull instancetype)initWithQueue:(dispatch_queue_t __nonnull)queue {
+- (instancetype)initWithQueue:(nullable dispatch_queue_t)queue {
     self = [self init];
-    if (self) {
-        self.queue = queue;
-    }
+
+    self.state = DANPromiseStateIncomplete;
+    self.queue = queue;
     
     return self;
 }
 
-+ (nonnull instancetype)deferredValue {
++ (instancetype)deferredValue {
     return [[self alloc] init];
 }
 

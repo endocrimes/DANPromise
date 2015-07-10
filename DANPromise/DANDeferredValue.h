@@ -29,7 +29,7 @@ typedef void (^DANDeferredExecutorBlock)(DANDeferredSuccessBlock success, DANDef
 /**
  * Create a new DANDeferredValue that executes on a given queue.
  */
-- (instancetype)initWithQueue:(dispatch_queue_t)queue;
+- (instancetype)initWithQueue:(nullable dispatch_queue_t)queue NS_DESIGNATED_INITIALIZER;
 
 /**
  *  Create a new DANDeferredValue with no attached queue.
