@@ -18,11 +18,7 @@
 @implementation DANDeferredValueTests
 
 - (void)test_creatingADeferredValue_withAnExecutorBlock_usingDeferredValueWithExecutor {
-    DANDeferredExecutorBlock executor = ^(DANPromiseSuccessBlock __nonnull success,
-                                          DANPromiseErrorBlock __nonnull error) {
-        
-    };
-    
+    DANDeferredExecutorBlock executor = ^(DANPromiseSuccessBlock success, DANPromiseErrorBlock error) {};
     DANDeferredValue *deferredValue = [DANDeferredValue deferredValueWithExecutor:executor];
     
     XCTAssertNotNil(deferredValue);
