@@ -12,9 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @class DANPromise;
 
-typedef void (^DANPromiseSuccessBlock)(id __nonnull);
-typedef void (^DANPromiseErrorBlock)(NSError *__nonnull);
-typedef void (^DANPromiseTryMapBlock)(id, DANPromiseSuccessBlock, DANPromiseErrorBlock);
+typedef void (^DANPromiseSuccessBlock)(id value);
+typedef void (^DANPromiseErrorBlock)(NSError *error);
+typedef void (^DANPromiseTryMapBlock)(id value, DANPromiseSuccessBlock success, DANPromiseErrorBlock failure);
 
 @interface DANPromise : NSObject
 

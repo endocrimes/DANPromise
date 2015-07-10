@@ -15,9 +15,9 @@ NS_ASSUME_NONNULL_BEGIN
 extern NSString *DANDeferredValueErrorDomain;
 extern const NSInteger DANDeferredValueNilResultError;
 
-typedef void (^DANDeferredSuccessBlock)(id __nonnull);
-typedef void (^DANDeferredErrorBlock)(NSError *__nonnull);
-typedef void (^DANDeferredExecutorBlock)(DANDeferredSuccessBlock __nonnull, DANDeferredErrorBlock __nonnull);
+typedef void (^DANDeferredSuccessBlock)(id value);
+typedef void (^DANDeferredErrorBlock)(NSError *error);
+typedef void (^DANDeferredExecutorBlock)(DANDeferredSuccessBlock success, DANDeferredErrorBlock failure);
 
 @interface DANDeferredValue : DANPromise
 
