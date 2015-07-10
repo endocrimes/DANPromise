@@ -1,0 +1,431 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6571E4661B4ED89A00D4C697 /* DANPromise.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6571E4651B4ED89A00D4C697 /* DANPromise.h */; };
+		6571E4681B4ED89A00D4C697 /* DANPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = 6571E4671B4ED89A00D4C697 /* DANPromise.m */; };
+		6571E46E1B4ED89B00D4C697 /* libDANPromise.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6571E4621B4ED89A00D4C697 /* libDANPromise.a */; };
+		6571E47D1B4ED8B400D4C697 /* DANPromiseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6571E47C1B4ED8B400D4C697 /* DANPromiseTests.m */; };
+		65DA81A71B4FBCEC0005387F /* DANDeferredValueTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DA81A61B4FBCEC0005387F /* DANDeferredValueTests.m */; };
+		65DA81AA1B4FBD090005387F /* DANDeferredValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DA81A91B4FBD090005387F /* DANDeferredValue.m */; };
+		65DA81CE1B4FE73F0005387F /* DANTestCallback.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DA81CD1B4FE73F0005387F /* DANTestCallback.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6571E46F1B4ED89B00D4C697 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6571E45A1B4ED89A00D4C697 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6571E4611B4ED89A00D4C697;
+			remoteInfo = DANPromise;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6571E4601B4ED89A00D4C697 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				6571E4661B4ED89A00D4C697 /* DANPromise.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		6571E4621B4ED89A00D4C697 /* libDANPromise.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDANPromise.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		6571E4651B4ED89A00D4C697 /* DANPromise.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DANPromise.h; sourceTree = "<group>"; };
+		6571E4671B4ED89A00D4C697 /* DANPromise.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DANPromise.m; sourceTree = "<group>"; };
+		6571E46D1B4ED89B00D4C697 /* DANPromiseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DANPromiseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6571E4731B4ED89B00D4C697 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6571E47C1B4ED8B400D4C697 /* DANPromiseTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DANPromiseTests.m; sourceTree = "<group>"; };
+		65DA81A61B4FBCEC0005387F /* DANDeferredValueTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DANDeferredValueTests.m; sourceTree = "<group>"; };
+		65DA81A81B4FBD090005387F /* DANDeferredValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DANDeferredValue.h; sourceTree = "<group>"; };
+		65DA81A91B4FBD090005387F /* DANDeferredValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DANDeferredValue.m; sourceTree = "<group>"; };
+		65DA81AB1B4FC0910005387F /* DANPromise_Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DANPromise_Private.h; sourceTree = "<group>"; };
+		65DA81CC1B4FE73F0005387F /* DANTestCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DANTestCallback.h; sourceTree = "<group>"; };
+		65DA81CD1B4FE73F0005387F /* DANTestCallback.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DANTestCallback.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6571E45F1B4ED89A00D4C697 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6571E46A1B4ED89B00D4C697 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6571E46E1B4ED89B00D4C697 /* libDANPromise.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6571E4591B4ED89A00D4C697 = {
+			isa = PBXGroup;
+			children = (
+				6571E4641B4ED89A00D4C697 /* DANPromise */,
+				6571E4711B4ED89B00D4C697 /* DANPromiseTests */,
+				6571E4631B4ED89A00D4C697 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6571E4631B4ED89A00D4C697 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6571E4621B4ED89A00D4C697 /* libDANPromise.a */,
+				6571E46D1B4ED89B00D4C697 /* DANPromiseTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6571E4641B4ED89A00D4C697 /* DANPromise */ = {
+			isa = PBXGroup;
+			children = (
+				65DA81AB1B4FC0910005387F /* DANPromise_Private.h */,
+				6571E4651B4ED89A00D4C697 /* DANPromise.h */,
+				6571E4671B4ED89A00D4C697 /* DANPromise.m */,
+				65DA81A81B4FBD090005387F /* DANDeferredValue.h */,
+				65DA81A91B4FBD090005387F /* DANDeferredValue.m */,
+			);
+			path = DANPromise;
+			sourceTree = "<group>";
+		};
+		6571E4711B4ED89B00D4C697 /* DANPromiseTests */ = {
+			isa = PBXGroup;
+			children = (
+				6571E4721B4ED89B00D4C697 /* Supporting Files */,
+				65DA81CF1B4FE7570005387F /* Helpers */,
+				6571E47C1B4ED8B400D4C697 /* DANPromiseTests.m */,
+				65DA81A61B4FBCEC0005387F /* DANDeferredValueTests.m */,
+			);
+			path = DANPromiseTests;
+			sourceTree = "<group>";
+		};
+		6571E4721B4ED89B00D4C697 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6571E4731B4ED89B00D4C697 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		65DA81CF1B4FE7570005387F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				65DA81CC1B4FE73F0005387F /* DANTestCallback.h */,
+				65DA81CD1B4FE73F0005387F /* DANTestCallback.m */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6571E4611B4ED89A00D4C697 /* DANPromise */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6571E4761B4ED89B00D4C697 /* Build configuration list for PBXNativeTarget "DANPromise" */;
+			buildPhases = (
+				6571E45E1B4ED89A00D4C697 /* Sources */,
+				6571E45F1B4ED89A00D4C697 /* Frameworks */,
+				6571E4601B4ED89A00D4C697 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DANPromise;
+			productName = DANPromise;
+			productReference = 6571E4621B4ED89A00D4C697 /* libDANPromise.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		6571E46C1B4ED89B00D4C697 /* DANPromiseTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6571E4791B4ED89B00D4C697 /* Build configuration list for PBXNativeTarget "DANPromiseTests" */;
+			buildPhases = (
+				6571E4691B4ED89B00D4C697 /* Sources */,
+				6571E46A1B4ED89B00D4C697 /* Frameworks */,
+				6571E46B1B4ED89B00D4C697 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6571E4701B4ED89B00D4C697 /* PBXTargetDependency */,
+			);
+			name = DANPromiseTests;
+			productName = DANPromiseTests;
+			productReference = 6571E46D1B4ED89B00D4C697 /* DANPromiseTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6571E45A1B4ED89A00D4C697 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = DAN;
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Rocket Apps";
+				TargetAttributes = {
+					6571E4611B4ED89A00D4C697 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					6571E46C1B4ED89B00D4C697 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+				};
+			};
+			buildConfigurationList = 6571E45D1B4ED89A00D4C697 /* Build configuration list for PBXProject "DANPromise" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6571E4591B4ED89A00D4C697;
+			productRefGroup = 6571E4631B4ED89A00D4C697 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6571E4611B4ED89A00D4C697 /* DANPromise */,
+				6571E46C1B4ED89B00D4C697 /* DANPromiseTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6571E46B1B4ED89B00D4C697 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6571E45E1B4ED89A00D4C697 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65DA81AA1B4FBD090005387F /* DANDeferredValue.m in Sources */,
+				6571E4681B4ED89A00D4C697 /* DANPromise.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6571E4691B4ED89B00D4C697 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65DA81A71B4FBCEC0005387F /* DANDeferredValueTests.m in Sources */,
+				6571E47D1B4ED8B400D4C697 /* DANPromiseTests.m in Sources */,
+				65DA81CE1B4FE73F0005387F /* DANTestCallback.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6571E4701B4ED89B00D4C697 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6571E4611B4ED89A00D4C697 /* DANPromise */;
+			targetProxy = 6571E46F1B4ED89B00D4C697 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		6571E4741B4ED89B00D4C697 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_ASSIGN_ENUM = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_RECEIVER_WEAK = YES;
+				CLANG_WARN_OBJC_REPEATED_USE_OF_WEAK = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		6571E4751B4ED89B00D4C697 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_ASSIGN_ENUM = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_RECEIVER_WEAK = YES;
+				CLANG_WARN_OBJC_REPEATED_USE_OF_WEAK = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6571E4771B4ED89B00D4C697 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		6571E4781B4ED89B00D4C697 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		6571E47A1B4ED89B00D4C697 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = DANPromiseTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "co.rocketapps.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		6571E47B1B4ED89B00D4C697 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = DANPromiseTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "co.rocketapps.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6571E45D1B4ED89A00D4C697 /* Build configuration list for PBXProject "DANPromise" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6571E4741B4ED89B00D4C697 /* Debug */,
+				6571E4751B4ED89B00D4C697 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6571E4761B4ED89B00D4C697 /* Build configuration list for PBXNativeTarget "DANPromise" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6571E4771B4ED89B00D4C697 /* Debug */,
+				6571E4781B4ED89B00D4C697 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6571E4791B4ED89B00D4C697 /* Build configuration list for PBXNativeTarget "DANPromiseTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6571E47A1B4ED89B00D4C697 /* Debug */,
+				6571E47B1B4ED89B00D4C697 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6571E45A1B4ED89A00D4C697 /* Project object */;
+}
