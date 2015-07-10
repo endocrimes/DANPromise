@@ -10,9 +10,6 @@
 #import "DANPromise_Private.h"
 #import "DANDeferredValue.h"
 
-@interface DANPromise ()
-@end
-
 @implementation DANPromise
 
 - (instancetype)init {

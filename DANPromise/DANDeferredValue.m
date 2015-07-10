@@ -20,9 +20,6 @@ static NSError *NSErrorFromNilValue() {
                                       }];
 }
 
-@interface DANDeferredValue ()
-@end
-
 @implementation DANDeferredValue
 
 - (void)transitionToState:(DANPromiseState)state {
