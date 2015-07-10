@@ -102,7 +102,6 @@ static NSError *NSErrorFromNilValue() {
 
 - (DANPromise *)reject:(nonnull NSError *)error {
     self.result = error;
-    g
     [self transitionToState:DANPromiseStateRejected];
     return [self promise];
 }
