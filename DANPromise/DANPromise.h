@@ -6,34 +6,34 @@
 //  Copyright (c) 2015 Rocket Apps. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 NS_ASSUME_NONNULL_BEGIN
 
 @class DANPromise;
 
-typedef void (^DANPromiseSuccessBlock)(id __nonnull);
-typedef void (^DANPromiseErrorBlock)(NSError *__nonnull);
-typedef void (^DANPromiseTryMapBlock)(id, DANPromiseSuccessBlock, DANPromiseErrorBlock);
+typedef void (^DANPromiseSuccessBlock)(id value);
+typedef void (^DANPromiseErrorBlock)(NSError *error);
+typedef void (^DANPromiseTryMapBlock)(id value, DANPromiseSuccessBlock success, DANPromiseErrorBlock failure);
 
 @interface DANPromise : NSObject
 
-@property (nonatomic, strong) id __nullable result;
+@property (nonatomic, nullable, strong) id result;
 
 /**
- *  @return If the Promise has completed with a rejection.
+ *  If the Promise has completed with a rejection.
  */
-- (BOOL)isRejected;
+@property (nonatomic, readonly, getter=isRejected) BOOL rejected;
 
 /**
- *  @return If the Promise has completed successfully.
+ *  If the Promise has completed successfully.
  */
-- (BOOL)isFulfilled;
+@property (nonatomic, readonly, getter=isFulfilled) BOOL fulfilled;
 
 /**
- *  @return If the promise was cancelled.
+ *  If the promise was cancelled.
  */
-- (BOOL)isCancelled;
+@property (nonatomic, readonly, getter=isCancelled) BOOL cancelled;
 
 /**
  *  Add a block to be called asyncronously upon fullfillment of the promise or immediately if already completed.

@@ -10,9 +10,6 @@
 #import "DANPromise_Private.h"
 #import "DANDeferredValue.h"
 
-@interface DANPromise ()
-@end
-
 @implementation DANPromise
 
 - (instancetype)init {
@@ -21,7 +18,7 @@
         _callbacks = [NSMutableArray array];
         _internalQueue = dispatch_queue_create("lt.danie.promises", 0);
     }
-    
+
     return self;
 }
 
@@ -37,7 +34,7 @@
     return self.state == DANPromiseStateCancelled;
 }
 
-- (nonnull DANPromise *)then:(nonnull DANPromiseSuccessBlock)then {
+- (DANPromise *)then:(DANPromiseSuccessBlock)then {
     [self bindOrPerformBlock:^{
         if (self.isFulfilled && !self.isCancelled) {
             then(self.result);
@@ -47,7 +44,7 @@
     return self;
 }
 
-- (nonnull DANPromise *)catch:(nonnull DANPromiseErrorBlock)error {
+- (DANPromise *)catch:(DANPromiseErrorBlock)error {
     [self bindOrPerformBlock:^{
         if (self.isRejected && !self.isCancelled) {
             error((NSError *)self.result);
@@ -57,7 +54,7 @@
     return self;
 }
 
-- (nonnull DANPromise *)onQueue:(nonnull dispatch_queue_t)queue {
+- (DANPromise *)onQueue:(dispatch_queue_t)queue {
     DANDeferredValue *value = [[DANDeferredValue alloc] initWithQueue:queue];
     [self then:^(id result){
         [value fullfill:result];
@@ -69,7 +66,7 @@
     return [value promise];
 }
 
-- (nonnull DANPromise *)tryMap:(nonnull DANPromiseTryMapBlock)map {
+- (DANPromise *)tryMap:(DANPromiseTryMapBlock)map {
     DANDeferredValue *transformedValue = [DANDeferredValue deferredValue];
     [self then:^(id result) {
         DANDeferredSuccessBlock successBlock = ^(id result) {

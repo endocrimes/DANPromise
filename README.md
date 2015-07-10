@@ -1,14 +1,18 @@
 # DANPromise
-A threadsafe, lightweight implementation of Promises in Objective-C.
+
+A thread-safe, lightweight implementation of promises in Objective-C.
 
 ## Installation
 
-I reccomend installation through CocoaPods, although you can use git submodules if you wish.
-`pod 'DANPromise'`
+Installation through CocoaPods is recommended, although one may use git submodules too.
+
+```ruby
+pod 'DANPromise'
+```
 
 ## Usage
 
-```
+```objc
 DANDeferredValue *deferred = [DANDeferredValue deferredValue];
 DANPromise *promise = [deferred promise];
     
