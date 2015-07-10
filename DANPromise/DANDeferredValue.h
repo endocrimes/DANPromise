@@ -40,7 +40,7 @@ typedef void (^DANDeferredExecutorBlock)(DANDeferredSuccessBlock success, DANDef
  *  Create a new DANDeferredValue with no attached queue and an asyncronous executor block. The executor will be called
  *  automatically, and the callbacks will handle fullfillment and rejection of the DeferredValue.
  */
-+ (instancetype)deferredValueWithExecutor:(nonnull DANDeferredExecutorBlock)executor;
++ (instancetype)deferredValueWithExecutor:(DANDeferredExecutorBlock)executor;
 
 /**
  *  Fullfill the Promise with a given value. Although it is safe to call this method multiple times, only the first 
@@ -52,7 +52,7 @@ typedef void (^DANDeferredExecutorBlock)(DANDeferredSuccessBlock success, DANDef
  *  Reject the Promise with a given error. Although it is safe to call this method multiple times, only the first
  *  error will be used.
  */
-- (DANPromise *)reject:(nonnull NSError *)error;
+- (DANPromise *)reject:(NSError *)error;
 
 /**
  *  Return a DANPromise from the DANDefferedValue.
